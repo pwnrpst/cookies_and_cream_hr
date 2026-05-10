@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="mockup">
+
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon"></div><div class="brand-text"><strong>Cookies&Cream</strong><span>ESS Portal</span></div></div>
+  <nav class="nav">
+    <a href="index.html"><div class="nav-item active"><span class="nav-icon">⌂</span>Dashboard</div></a>
+    <a href="profile.html"><div class="nav-item"><span class="nav-icon">♙</span>My Profile</div></a>
+    <a href="apply-form.html"><div class="nav-item"><span class="nav-icon">⊞</span>Apply Leave</div></a>
+    <a href="leave-balance.html"><div class="nav-item"><span class="nav-icon">▣</span>Leave Balance</div></a>
+    <a href="leave-requests.html"><div class="nav-item"><span class="nav-icon">▤</span>Leave Requests</div></a>
+    <a href="payroll.html"><div class="nav-item"><span class="nav-icon">▥</span>Payroll Info</div></a>
+    <a href="notifications.html"><div class="nav-item"><span class="nav-icon">⌂</span>Notifications <span class="badge">3</span></div></a>
+    <a href="help.html"><div class="nav-item"><span class="nav-icon">?</span>Help &amp; Support</div></a>
+  </nav>
+  <div class="logout"><a href="login.html"><div class="nav-item"><span class="nav-icon">⇱</span>Log Out</div></a></div>
+</aside>
+<section class="content">
+<div class="topbar">
+  <div><h1>Dashboard</h1><div class="breadcrumb"></div></div>
+  
+<div class="user-area">
+  <a class="bell" href="notifications.html">♧<span class="tiny-badge">3</span></a>
+  <div class="avatar">SL</div>
+  <a class="user-profile-link" href="profile.html"><div class="user-name">Sarah Lum <span>⌄</span></div><div class="emp-id">EMP0245</div></a>
+</div>
+
+</div>
+
+<div class="card welcome-card">
+  <div class="big-avatar">SL</div>
+  <div>
+    <div class="welcome-title">Welcome back, Sarah Lum! 👋</div>
+    <!-- <div class="welcome-sub">Apply leave quickly or access payroll information from one place.</div> -->
+    <div class="profile-facts">
+      <div class="fact"><div class="fact-icon">♙</div><div><small>Employee ID</small><strong>EMP0245</strong></div></div>
+      <div class="fact"><div class="fact-icon">♢</div><div><small>Department</small><strong>Marketing</strong></div></div>
+      <div class="fact"><div class="fact-icon">♙</div><div><small>Position</small><strong>Marketing Executive</strong></div></div>
+    </div>
+  </div>
+</div>
+<div class="grid">
+  <div class="card panel">
+    <div class="panel-header"><h3 class="panel-title">Leave Balance Summary</h3><a href="leave-balance.html" class="link">View Details</a></div>
+    <div class="balance-row">
+      <div class="balance-box"><h4>Annual Leave</h4><div class="balance-num green">10</div><div class="green">days available</div></div>
+      <div class="balance-box"><h4>Sick Leave</h4><div class="balance-num orange">5</div><div>days available</div></div>
+      <div class="balance-box"><h4>No-Pay Leave</h4><div class="balance-num blue">2</div><div>days available</div></div>
+      <div class="balance-box"><h4>Maternity Leave</h4><div class="balance-num purple">60</div><div>days available</div></div>
+    </div>
+  </div>
+  <div class="card panel">
+    <div class="panel-header"><h3 class="panel-title">My Leave Requests</h3><a href="leave-requests.html" class="link">View All</a></div>
+    <div class="status-list">
+      <div class="status-line"><span class="dot yellow"></span>Pending Approval <strong>2</strong></div>
+      <div class="status-line"><span class="dot green"></span>Approved <strong>3</strong></div>
+      <div class="status-line"><span class="dot red"></span>Rejected <strong>0</strong></div>
+    </div>
+  </div>
+</div>
+<div class="grid">
+  <div class="card panel">
+    <div class="panel-header"><h3 class="panel-title">Quick Actions</h3></div>
+    <div class="quick-row">
+      <a href="apply-form.html" class="quick-item active"><div><div class="quick-icon">⊞</div>Apply Leave</div></a>
+      <a href="leave-requests.html" class="quick-item"><div><div class="quick-icon">▤</div>Leave Requests</div></a>
+      <a href="leave-balance.html" class="quick-item"><div><div class="quick-icon">◔</div>Leave Balance</div></a>
+      <a href="calendar.html" class="quick-item"><div><div class="quick-icon">▣</div>Calendar</div></a>
+      <a href="profile.html" class="quick-item"><div><div class="quick-icon">♙</div>My Profile</div></a>
+      <a href="payroll.html" class="quick-item"><div><div class="quick-icon">▥</div>Payroll Info</div></a>
+    </div>
+  </div>
+  <div class="card panel">
+    <div class="panel-header"><h3 class="panel-title">Notifications</h3><a href="notifications.html" class="link">View All</a></div>
+    <div class="notification-list">
+      <a class="notification-item notification-link" href="leave-requests.html#request-process"><span class="dot blue"></span><span>Your leave request (LV-2025-05-000123) is pending Daniel Reed's approval. Track process</span><span class="time">2 hours ago</span></a>
+      <div class="notification-item"><span class="dot blue"></span><span>Public Holiday: Wesak Day on 22 May 2025.</span><span class="time">1 day ago</span></div>
+      <div class="notification-item"><span class="dot blue"></span><span>System Maintenance on 25 May 2025, 10:00 PM - 12:00 AM.</span><span class="time">2 days ago</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="card panel payroll-dashboard-card">
+  <div class="panel-header"><h3 class="panel-title">Payroll Information</h3><a href="payroll.html" class="link">View Payslip</a></div>
+  <div class="payroll-mini-grid">
+    <div><small>Latest Payslip</small><strong>April 2026</strong></div>
+    <div><small>Net Pay</small><strong>$4,280.00</strong></div>
+    <div><small>Status</small><span class="status-pill approved">Released</span></div>
+  </div>
+</div>
+<div class="footer">© 2024 ANYBusiness Sdn. Bhd. All rights reserved.</div>
+</section></main>
+</body>
+</html>

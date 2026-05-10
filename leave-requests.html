@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leave Requests</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="mockup">
+
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon"></div><div class="brand-text"><strong>Cookies&Cream</strong><span>ESS Portal</span></div></div>
+  <nav class="nav">
+    <a href="index.html"><div class="nav-item"><span class="nav-icon">⌂</span>Dashboard</div></a>
+    <a href="profile.html"><div class="nav-item"><span class="nav-icon">♙</span>My Profile</div></a>
+    <a href="apply-form.html"><div class="nav-item"><span class="nav-icon">⊞</span>Apply Leave</div></a>
+    <a href="leave-balance.html"><div class="nav-item"><span class="nav-icon">▣</span>Leave Balance</div></a>
+    <a href="leave-requests.html"><div class="nav-item active"><span class="nav-icon">▤</span>Leave Requests</div></a>
+    <a href="payroll.html"><div class="nav-item"><span class="nav-icon">▥</span>Payroll Info</div></a>
+    <a href="notifications.html"><div class="nav-item"><span class="nav-icon">⌂</span>Notifications <span class="badge">3</span></div></a>
+    <a href="help.html"><div class="nav-item"><span class="nav-icon">?</span>Help &amp; Support</div></a>
+  </nav>
+  <div class="logout"><a href="login.html"><div class="nav-item"><span class="nav-icon">⇱</span>Log Out</div></a></div>
+</aside>
+<section class="content">
+<div class="topbar">
+  <div><h1>Leave Requests</h1><div class="breadcrumb"><a class="link" href="index.html">Dashboard</a><span>›</span><span class="current">Leave Requests</span></div></div>
+  
+<div class="user-area">
+  <a class="bell" href="notifications.html">♧<span class="tiny-badge">3</span></a>
+  <div class="avatar">SL</div>
+  <a class="user-profile-link" href="profile.html"><div class="user-name">Sarah Lum <span>⌄</span></div><div class="emp-id">EMP0245</div></a>
+</div>
+
+</div>
+
+<div id="request-process" class="card tracking-card">
+  <div class="tracking-header">
+    <!-- <div>
+      <h2>Current Approval Process</h2>
+      <p>Sarah can check multiple leave requests that are still being validated, reviewed, or escalated.</p>
+    </div> -->
+    <span class="status-pill pending">3 requests in progress</span>
+  </div>
+  <div class="process-flow track-flow">
+    <div class="process-step done"><span>✓</span><strong>Submitted</strong><small>Request received by HRM module</small></div>
+    <div class="process-step done"><span>✓</span><strong>System validation</strong><small>Leave type, rules and balance checked</small></div>
+    <div class="process-step current"><span>3</span><strong>Manager review</strong><small>Waiting for Reporting Manager decision</small></div>
+    <div class="process-step"><span>4</span><strong>HR escalation</strong><small>Only if special approval is needed</small></div>
+    <div class="process-step"><span>5</span><strong>Status update</strong><small>Automatic notification sent to Sarah</small></div>
+  </div>
+  <!-- <div class="tracking-note">This page avoids manual follow-up by showing the stage of each request clearly.</div> -->
+</div>
+
+<div class="card wide-card" style="padding:0;">
+  <div class="tabs"><a href="leave-requests.html" class="tab active">All</a><a href="leave-requests.html" class="tab">In Approval Process</a><a href="leave-requests.html" class="tab">Approved</a><a href="leave-requests.html" class="tab">Returned</a><a href="leave-requests.html" class="tab">Rejected</a></div>
+  <div class="filter-row"><a href="leave-requests.html" class="filter-btn">▽ Filter⌄</a></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Reference No.</th><th>Leave Type</th><th>Start Date</th><th>End Date</th><th>Total Days</th><th>Status</th><th>Approval Stage</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td>LV-2026-05-000123</td><td>Annual Leave</td><td>20/05/2026<br>(Wed)</td><td>23/05/2026<br>(Sat)</td><td>4 days</td><td><span class="status-pill pending">Pending</span></td><td>Manager review<br><small>Daniel Reed</small></td><td><a class="track-link" href="#request-process">Track Process</a></td></tr>
+        <tr><td>LV-2026-06-000141</td><td>Sick Leave</td><td>04/06/2026<br>(Thu)</td><td>04/06/2026<br>(Thu)</td><td>1 day</td><td><span class="status-pill pending">In validation</span></td><td>System validation<br><small>Document check</small></td><td><a class="track-link" href="#request-process">Track Process</a></td></tr>
+        <tr><td>LV-2026-06-000152</td><td>No-Pay Leave</td><td>12/06/2026<br>(Fri)</td><td>14/06/2026<br>(Sun)</td><td>3 days</td><td><span class="status-pill pending">Escalated</span></td><td>HR review<br><small>Special approval</small></td><td><a class="track-link" href="#request-process">Track Process</a></td></tr>
+        <tr><td>LV-2026-04-000098</td><td>Annual Leave</td><td>10/04/2026<br>(Fri)</td><td>11/04/2026<br>(Sat)</td><td>2 days</td><td><span class="status-pill approved">Approved</span></td><td>Completed<br><small>Balance updated</small></td><td><a class="more-link" href="review.html">View</a></td></tr>
+        <tr><td>LV-2026-03-000076</td><td>No-Pay Leave</td><td>05/03/2026<br>(Thu)</td><td>07/03/2026<br>(Sat)</td><td>3 days</td><td><span class="status-pill rejected">Rejected</span></td><td>Closed<br><small>Insufficient reason</small></td><td><a class="more-link" href="review.html">View</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-footer"><div>Showing 1 to 5 of 5 entries</div><div class="pagination"><a href="leave-requests.html" class="page-btn">‹</a><a href="leave-requests.html" class="page-btn current">1</a><a href="leave-requests.html" class="page-btn">›</a></div></div>
+</div>
+<div class="footer">© 2024 ANYBusiness Sdn. Bhd. All rights reserved.</div>
+</section></main>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Dates</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="mockup">
+
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon"></div><div class="brand-text"><strong>Cookies&Cream</strong><span>ESS Portal</span></div></div>
+  <nav class="nav">
+    <a href="index.html"><div class="nav-item"><span class="nav-icon">⌂</span>Dashboard</div></a>
+    <a href="profile.html"><div class="nav-item"><span class="nav-icon">♙</span>My Profile</div></a>
+    <a href="apply-form.html"><div class="nav-item active"><span class="nav-icon">⊞</span>Apply Leave</div></a>
+    <a href="leave-balance.html"><div class="nav-item"><span class="nav-icon">▣</span>Leave Balance</div></a>
+    <a href="leave-requests.html"><div class="nav-item"><span class="nav-icon">▤</span>Leave Requests</div></a>
+    <a href="payroll.html"><div class="nav-item"><span class="nav-icon">▥</span>Payroll Info</div></a>
+    <a href="notifications.html"><div class="nav-item"><span class="nav-icon">⌂</span>Notifications <span class="badge">3</span></div></a>
+    <a href="help.html"><div class="nav-item"><span class="nav-icon">?</span>Help &amp; Support</div></a>
+  </nav>
+  <div class="logout"><a href="login.html"><div class="nav-item"><span class="nav-icon">⇱</span>Log Out</div></a></div>
+</aside>
+<section class="content">
+<div class="topbar">
+  <div><h1>Apply Leave</h1><div class="breadcrumb"><span class="link">Dashboard</span><span>›</span><span class="">Apply Leave</span><span>›</span><span class="">Leave Type</span><span>›</span><span class="current">Select Dates</span></div></div>
+  
+<div class="user-area">
+  <a class="bell" href="notifications.html">♧<span class="tiny-badge">3</span></a>
+  <div class="avatar">SL</div>
+  <a class="user-profile-link" href="profile.html"><div class="user-name">Sarah Lum <span>⌄</span></div><div class="emp-id">EMP0245</div></a>
+</div>
+
+</div>
+
+<div class="card form-card">
+  <h2 class="section-title">Leave Information</h2>
+  <div class="form-grid">
+    <div class="field"><label>Leave Type <span class="required">*</span></label><div class="input"><span class="chosen-leave-type placeholder-text">Select a leave type first</span> <span>⌄</span></div></div>
+    <div class="field"><label>Total Days</label><div class="input disabled"><span class="total-days-text">0 days</span></div></div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="section-title">Select Dates</h2>
+  <div class="form-grid">
+    <div class="field"><label>Start Date <span class="required">*</span></label><input class="input date-input" id="start-date" type="date" /></div>
+    <div class="field"><label>End Date <span class="required">*</span></label><input class="input date-input" id="end-date" type="date" /></div>
+  </div>
+  <div class="info-box green-total"><span style="font-size:28px;">▣</span><div><div style="font-weight:800;">Total Days</div><div class="total-days-text" style="font-size:25px;font-weight:900;color:#111827;">0 days</div></div></div>
+  <div class="button-row"><a class="btn" href="leave-type.html">Change Leave Type</a><a class="btn primary" id="continue-balance" href="leave-balance.html">Continue to Leave Balance</a></div>
+</div>
+<div class="footer">© 2024 ANYBusiness Sdn. Bhd. All rights reserved.</div>
+</section></main>
+
+<script>
+  const chosenLeaveType = localStorage.getItem('leaveType');
+  document.querySelectorAll('.chosen-leave-type').forEach(el => {
+    if (chosenLeaveType) {
+      el.textContent = chosenLeaveType;
+      el.classList.remove('placeholder-text');
+    }
+  });
+
+  const startInput = document.getElementById('start-date');
+  const endInput = document.getElementById('end-date');
+  const totalEls = document.querySelectorAll('.total-days-text');
+  const continueBtn = document.getElementById('continue-balance');
+
+  function formatDays(days) {
+    return days === 1 ? '1 day' : `${days} days`;
+  }
+
+  function updateTotalDays() {
+    const start = startInput.value ? new Date(startInput.value) : null;
+    const end = endInput.value ? new Date(endInput.value) : null;
+    let days = 0;
+    if (start && end && end >= start) {
+      days = Math.round((end - start) / (1000 * 60 * 60 * 24)) + 1;
+    }
+    const text = formatDays(days);
+    totalEls.forEach(el => el.textContent = text);
+    localStorage.setItem('totalDays', text);
+  }
+
+  startInput.addEventListener('change', updateTotalDays);
+  endInput.addEventListener('change', updateTotalDays);
+
+  continueBtn.addEventListener('click', (event) => {
+    if (!chosenLeaveType) {
+      event.preventDefault();
+      alert('Please select a leave type first.');
+      window.location.href = 'leave-type.html';
+      return;
+    }
+    if (!startInput.value || !endInput.value) {
+      event.preventDefault();
+      alert('Please select both start date and end date.');
+      return;
+    }
+    if (new Date(endInput.value) < new Date(startInput.value)) {
+      event.preventDefault();
+      alert('End date cannot be earlier than start date.');
+      return;
+    }
+    localStorage.setItem('startDate', startInput.value);
+    localStorage.setItem('endDate', endInput.value);
+    updateTotalDays();
+  });
+</script>
+</body>
+</html>

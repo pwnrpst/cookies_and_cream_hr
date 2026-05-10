@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leave Balance</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="mockup">
+
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon"></div><div class="brand-text"><strong>Cookies&Cream</strong><span>ESS Portal</span></div></div>
+  <nav class="nav">
+    <a href="index.html"><div class="nav-item"><span class="nav-icon">⌂</span>Dashboard</div></a>
+    <a href="profile.html"><div class="nav-item"><span class="nav-icon">♙</span>My Profile</div></a>
+    <a href="apply-form.html"><div class="nav-item"><span class="nav-icon">⊞</span>Apply Leave</div></a>
+    <a href="leave-balance.html"><div class="nav-item active"><span class="nav-icon">▣</span>Leave Balance</div></a>
+    <a href="leave-requests.html"><div class="nav-item"><span class="nav-icon">▤</span>Leave Requests</div></a>
+    <a href="payroll.html"><div class="nav-item"><span cslass="nav-icon">▥</span>Payroll Info</div></a>
+    <a href="notifications.html"><div class="nav-item"><span class="nav-icon">⌂</span>Notifications <span class="badge">3</span></div></a>
+    <a href="help.html"><div class="nav-item"><span class="nav-icon">?</span>Help &amp; Support</div></a>
+  </nav>
+  <div class="logout"><a href="login.html"><div class="nav-item"><span class="nav-icon">⇱</span>Log Out</div></a></div>
+</aside>
+<section class="content">
+<div class="topbar">
+  <div><h1>Apply Leave</h1><div class="breadcrumb"><span class="link">Dashboard</span><span>›</span><span class="">Apply Leave</span><span>›</span><span class="">Leave Type</span><span>›</span><span class="">Select Dates</span><span>›</span><span class="current">Leave Balance</span></div></div>
+  
+<div class="user-area">
+  <a class="bell" href="notifications.html">♧<span class="tiny-badge">3</span></a>
+  <div class="avatar">SL</div>
+  <a class="user-profile-link" href="profile.html"><div class="user-name">Sarah Lum <span>⌄</span></div><div class="emp-id">EMP0245</div></a>
+</div>
+
+</div>
+
+<div class="card form-card">
+  <h2 class="section-title">Leave Balance Summary</h2>
+  <div class="balance-row">
+    <div class="balance-box" style="min-height:190px;text-align:center;"><h4>Annual Leave</h4><div class="balance-num green" style="font-size:56px;">10</div><div class="green">days available</div></div>
+    <div class="balance-box" style="min-height:190px;text-align:center;"><h4>Sick Leave</h4><div class="balance-num orange" style="font-size:56px;">5</div><div>days available</div></div>
+    <div class="balance-box" style="min-height:190px;text-align:center;"><h4>No-Pay Leave</h4><div class="balance-num blue" style="font-size:56px;">2</div><div>days available</div></div>
+    <div class="balance-box" style="min-height:190px;text-align:center;"><h4>Maternity Leave</h4><div class="balance-num purple" style="font-size:56px;">60</div><div>days available</div></div>
+  </div>
+  <!-- <div class="info-box" style="height:150px;margin-top:44px;"><div class="info-icon">i</div><div><div style="font-weight:800;">Total Requested Days</div><div data-fill="totalDays" style="font-size:29px;font-weight:900;margin-top:8px;">0 days</div></div></div> -->
+  <!-- <div class="button-row"><a class="btn" href="select-dates.html">Edit Selected Dates</a><a class="btn primary" href="review.html">Continue to Review</a></div> -->
+</div>
+<div class="footer">© 2024 ANYBusiness Sdn. Bhd. All rights reserved.</div>
+</section></main>
+
+<script>
+  function prettyDate(value) {
+    if (!value) return 'Not selected';
+    const [y, m, d] = value.split('-');
+    return `${d}/${m}/${y}`;
+  }
+  const leaveType = localStorage.getItem('leaveType') || 'Not selected';
+  const startDate = prettyDate(localStorage.getItem('startDate'));
+  const endDate = prettyDate(localStorage.getItem('endDate'));
+  const totalDays = localStorage.getItem('totalDays') || '0 days';
+  document.querySelectorAll('[data-fill="leaveType"]').forEach(el => el.textContent = leaveType);
+  document.querySelectorAll('[data-fill="startDate"]').forEach(el => el.textContent = startDate);
+  document.querySelectorAll('[data-fill="endDate"]').forEach(el => el.textContent = endDate);
+  document.querySelectorAll('[data-fill="totalDays"]').forEach(el => el.textContent = totalDays);
+</script>
+</body>
+</html>

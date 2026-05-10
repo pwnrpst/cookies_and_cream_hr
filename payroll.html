@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payroll Information</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="mockup">
+
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon"></div><div class="brand-text"><strong>Cookies&Cream</strong><span>ESS Portal</span></div></div>
+  <nav class="nav">
+    <a href="index.html"><div class="nav-item"><span class="nav-icon">⌂</span>Dashboard</div></a>
+    <a href="profile.html"><div class="nav-item"><span class="nav-icon">♙</span>My Profile</div></a>
+    <a href="apply-form.html"><div class="nav-item"><span class="nav-icon">⊞</span>Apply Leave</div></a>
+    <a href="leave-balance.html"><div class="nav-item"><span class="nav-icon">▣</span>Leave Balance</div></a>
+    <a href="leave-requests.html"><div class="nav-item"><span class="nav-icon">▤</span>Leave Requests</div></a>
+    <a href="payroll.html"><div class="nav-item active"><span class="nav-icon">▥</span>Payroll Info</div></a>
+    <a href="notifications.html"><div class="nav-item"><span class="nav-icon">⌂</span>Notifications <span class="badge">3</span></div></a>
+    <a href="help.html"><div class="nav-item"><span class="nav-icon">?</span>Help &amp; Support</div></a>
+  </nav>
+  <div class="logout"><a href="login.html"><div class="nav-item"><span class="nav-icon">⇱</span>Log Out</div></a></div>
+</aside>
+<section class="content">
+<div class="topbar">
+  <div><h1>Payroll Information</h1><div class="breadcrumb"><a class="link" href="index.html">Dashboard</a><span>›</span><span class="current">Payroll Information</span></div></div>
+  
+<div class="user-area">
+  <a class="bell" href="notifications.html">♧<span class="tiny-badge">3</span></a>
+  <div class="avatar">SL</div>
+  <a class="user-profile-link" href="profile.html"><div class="user-name">Sarah Lum <span>⌄</span></div><div class="emp-id">EMP0245</div></a>
+</div>
+
+</div>
+
+<div class="card form-card payroll-card">
+  <div class="form-card-header">
+    <div>
+      <h2 class="section-title">My Payroll Summary</h2>
+      <!-- <p class="helper-text">Sarah can quickly view the latest payslip, check previous payslips, and download payroll records without contacting HR.</p> -->
+    </div>
+    <span class="status-pill approved">Latest payslip released</span>
+  </div>
+
+  <div class="payroll-overview">
+    <div class="payroll-stat"><small>Current Payroll Month</small><strong>April 2026</strong></div>
+    <div class="payroll-stat"><small>Net Pay</small><strong>$4,280.00</strong></div>
+    <div class="payroll-stat"><small>Payment Date</small><strong>30/04/2026</strong></div>
+    <div class="payroll-stat"><small>Delivery Method</small><strong>Electronic Payslip</strong></div>
+  </div>
+
+  <div class="mini-section">
+    <h3 class="mini-title">Latest Payslip Breakdown</h3>
+    <div class="payslip-grid">
+      <div class="payslip-panel">
+        <h4>Earnings</h4>
+        <div class="pay-line"><span>Base Salary</span><strong>$4,500.00</strong></div>
+        <div class="pay-line"><span>Allowance</span><strong>$250.00</strong></div>
+        <div class="pay-line total"><span>Total Earnings</span><strong>$4,750.00</strong></div>
+      </div>
+      <div class="payslip-panel">
+        <h4>Deductions</h4>
+        <div class="pay-line"><span>Tax</span><strong>$390.00</strong></div>
+        <div class="pay-line"><span>Leave / Adjustment</span><strong>$80.00</strong></div>
+        <div class="pay-line total"><span>Total Deductions</span><strong>$470.00</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mini-section">
+    <div class="panel-header"><h3 class="mini-title">Previous Payslips</h3><a href="payroll.html" class="link">View all</a></div>
+    <div class="table-wrap payroll-history-table">
+      <table>
+        <thead><tr><th>Payroll Month</th><th>Payment Date</th><th>Gross Pay</th><th>Deductions</th><th>Net Pay</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>April 2026</td><td>30/04/2026</td><td>$4,750.00</td><td>$470.00</td><td><strong>$4,280.00</strong></td><td><span class="status-pill approved">Available</span></td><td><a class="track-link" href="payroll.html">View Payslip</a></td></tr>
+          <tr><td>March 2026</td><td>31/03/2026</td><td>$4,650.00</td><td>$455.00</td><td><strong>$4,195.00</strong></td><td><span class="status-pill approved">Available</span></td><td><a class="track-link" href="payroll.html">View Payslip</a></td></tr>
+          <tr><td>February 2026</td><td>28/02/2026</td><td>$4,650.00</td><td>$455.00</td><td><strong>$4,195.00</strong></td><td><span class="status-pill approved">Available</span></td><td><a class="track-link" href="payroll.html">View Payslip</a></td></tr>
+          <tr><td>January 2026</td><td>31/01/2026</td><td>$4,600.00</td><td>$440.00</td><td><strong>$4,160.00</strong></td><td><span class="status-pill approved">Available</span></td><td><a class="track-link" href="payroll.html">View Payslip</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- <div class="mini-section">
+    <h3 class="mini-title">Payroll Process Status</h3>
+    <div class="process-flow track-flow payroll-flow">
+      <div class="process-step done"><span>1</span><strong>Payroll Calculated</strong><small>Salary, allowance, tax and deductions processed.</small></div>
+      <div class="process-step done"><span>2</span><strong>HR Approved</strong><small>Payroll batch approved by HR Manager.</small></div>
+      <div class="process-step done"><span>3</span><strong>Finance Posted</strong><small>Payment data sent to Finance Module.</small></div>
+      <div class="process-step current"><span>4</span><strong>Payslip Available</strong><small>Sarah can view current and previous electronic payslips.</small></div>
+    </div>
+  </div> -->
+
+  <div class="form-corner-actions">
+    <a class="btn" href="index.html">Return to Dashboard</a>
+    <a class="btn primary" href="payroll.html">Download Latest Payslip</a>
+  </div>
+</div>
+<div class="footer">© 2024 ANYBusiness Sdn. Bhd. All rights reserved.</div>
+</section></main>
+</body>
+</html>

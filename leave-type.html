@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leave Type</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="mockup">
+
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon"></div><div class="brand-text"><strong>Cookies&Cream</strong><span>ESS Portal</span></div></div>
+  <nav class="nav">
+    <a href="index.html"><div class="nav-item"><span class="nav-icon">⌂</span>Dashboard</div></a>
+    <a href="profile.html"><div class="nav-item"><span class="nav-icon">♙</span>My Profile</div></a>
+    <a href="apply-form.html"><div class="nav-item active"><span class="nav-icon">⊞</span>Apply Leave</div></a>
+    <a href="leave-balance.html"><div class="nav-item"><span class="nav-icon">▣</span>Leave Balance</div></a>
+    <a href="leave-requests.html"><div class="nav-item"><span class="nav-icon">▤</span>Leave Requests</div></a>
+    <a href="payroll.html"><div class="nav-item"><span class="nav-icon">▥</span>Payroll Info</div></a>
+    <a href="notifications.html"><div class="nav-item"><span class="nav-icon">⌂</span>Notifications <span class="badge">3</span></div></a>
+    <a href="help.html"><div class="nav-item"><span class="nav-icon">?</span>Help &amp; Support</div></a>
+  </nav>
+  <div class="logout"><a href="login.html"><div class="nav-item"><span class="nav-icon">⇱</span>Log Out</div></a></div>
+</aside>
+<section class="content">
+<div class="topbar">
+  <div><h1>Apply Leave</h1><div class="breadcrumb"><span class="link">Dashboard</span><span>›</span><span class="">Apply Leave</span><span>›</span><span class="current">Leave Type</span></div></div>
+  
+<div class="user-area">
+  <a class="bell" href="notifications.html">♧<span class="tiny-badge">3</span></a>
+  <div class="avatar">SL</div>
+  <a class="user-profile-link" href="profile.html"><div class="user-name">Sarah Lum <span>⌄</span></div><div class="emp-id">EMP0245</div></a>
+</div>
+
+</div>
+
+<div class="card form-card">
+  <h2 class="section-title">Select Leave Type</h2>
+  <p class="helper-text">Choose the leave type you want to apply for. The system will use this selection in the next steps.</p>
+  <div class="leave-options">
+    <a class="leave-option" href="select-dates.html" onclick="localStorage.setItem('leaveType','Annual Leave'); localStorage.removeItem('startDate'); localStorage.removeItem('endDate'); localStorage.removeItem('totalDays');">
+      <div class="option-icon tile-blue">☀</div>
+      <div><strong>Annual Leave</strong><span>For planned holidays or personal time off.</span></div>
+    </a>
+    <a class="leave-option" href="select-dates.html" onclick="localStorage.setItem('leaveType','Sick Leave'); localStorage.removeItem('startDate'); localStorage.removeItem('endDate'); localStorage.removeItem('totalDays');">
+      <div class="option-icon tile-green">✚</div>
+      <div><strong>Sick Leave</strong><span>For illness or medical appointments.</span></div>
+    </a>
+    <a class="leave-option" href="select-dates.html" onclick="localStorage.setItem('leaveType','No-Pay Leave'); localStorage.removeItem('startDate'); localStorage.removeItem('endDate'); localStorage.removeItem('totalDays');">
+      <div class="option-icon tile-orange">◔</div>
+      <div><strong>No-Pay Leave</strong><span>For unpaid leave when paid balance is not available.</span></div>
+    </a>
+    <a class="leave-option" href="select-dates.html" onclick="localStorage.setItem('leaveType','Maternity Leave'); localStorage.removeItem('startDate'); localStorage.removeItem('endDate'); localStorage.removeItem('totalDays');">
+      <div class="option-icon tile-purple">♡</div>
+      <div><strong>Maternity Leave</strong><span>For maternity-related leave entitlement.</span></div>
+    </a>
+    <a class="leave-option" href="select-dates.html" onclick="localStorage.setItem('leaveType','Paternity Leave'); localStorage.removeItem('startDate'); localStorage.removeItem('endDate'); localStorage.removeItem('totalDays');">
+      <div class="option-icon tile-blue">♙</div>
+      <div><strong>Paternity Leave</strong><span>For paternity-related leave entitlement.</span></div>
+    </a>
+  </div>
+  <div class="button-row"><a class="btn" href="apply-form.html">Edit Leave Details</a></div>
+</div>
+</section></main>
+</body>
+</html>

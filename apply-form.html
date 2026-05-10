@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply Leave</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="mockup">
+
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon"></div><div class="brand-text"><strong>Cookies&Cream</strong><span>ESS Portal</span></div></div>
+  <nav class="nav">
+    <a href="index.html"><div class="nav-item"><span class="nav-icon">⌂</span>Dashboard</div></a>
+    <a href="profile.html"><div class="nav-item"><span class="nav-icon">♙</span>My Profile</div></a>
+    <a href="apply-form.html"><div class="nav-item active"><span class="nav-icon">⊞</span>Apply Leave</div></a>
+    <!-- <a href="leave-requests.html"><div class="nav-item"><span class="nav-icon">▤</span>Leave Requests</div></a> -->
+    <a href="leave-balance.html"><div class="nav-item"><span class="nav-icon">▣</span>Leave Balance</div></a>
+    <a href="leave-requests.html"><div class="nav-item"><span class="nav-icon">▤</span>Leave Requests</div></a>
+    <a href="payroll.html"><div class="nav-item"><span class="nav-icon">▥</span>Payroll Info</div></a>
+    <a href="notifications.html"><div class="nav-item"><span class="nav-icon">⌂</span>Notifications <span class="badge">3</span></div></a>
+    <a href="help.html"><div class="nav-item"><span class="nav-icon">?</span>Help &amp; Support</div></a>
+  </nav>
+  <div class="logout"><a href="login.html"><div class="nav-item"><span class="nav-icon">⇱</span>Log Out</div></a></div>
+</aside>
+<section class="content">
+<div class="topbar">
+  <div><h1>Apply Leave</h1><div class="breadcrumb"><a class="link" href="index.html">Dashboard</a><span>›</span><span class="current">Apply Leave</span></div></div>
+  
+<a class="user-profile-link" href="profile.html">
+<div class="user-area">
+  <a class="bell" href="notifications.html">♧<span class="tiny-badge">3</span></a>
+  <div class="avatar">SL</div>
+  <div><div class="user-name">Sarah Lum <span>⌄</span></div><div class="emp-id">EMP0245</div></div>
+</div>
+</a>
+
+</div>
+
+<div class="card form-card one-page-leave-card">
+  <div class="form-card-header">
+    <div>
+      <h2 class="section-title">Leave Application</h2>
+      <!-- <p class="helper-text">Apply for leave quickly in one page. Required fields are marked with <span class="required">*</span>, and status updates are sent automatically.</p> -->
+    </div>
+    <!-- <div class="status-pill pending">Draft · quick form</div> -->
+  </div>
+
+
+  <!-- <section class="persona-fit-strip"> -->
+    <!-- <div>
+      <strong>Designed for quick use</strong>
+      <span>Sarah is a 24-year-old Marketing Executive who uses the HR system occasionally, so this form keeps everything on one page with clear required fields.</span>
+    </div>
+    <div>
+      <strong>Status is visible</strong>
+      <span>The request starts as Draft and changes to Pending Approval after submission, so Sarah does not need to follow up manually.</span>
+    </div>
+    <div>
+      <strong>Works on any device</strong>
+      <span>The layout adapts for laptop, tablet, and mobile access.</span>
+    </div> -->
+  <!-- </section> -->
+
+  <section class="mini-section">
+    <!-- <h3 class="mini-title">Employee &amp; Approval Information</h3> -->
+    <div class="form-grid three-col">
+      <div class="field"><label>Employee Name</label><div class="input disabled">Sarah Lum</div></div>
+      <div class="field"><label>Employee ID</label><div class="input disabled">EMP0245</div></div>
+      <div class="field"><label>Department</label><div class="input disabled">Marketing</div></div>
+      <div class="field"><label>Position</label><div class="input disabled">Marketing Executive</div></div>
+      <div class="field"><label>Reported To</label><div class="input disabled">Daniel Reed</div></div>
+      <div class="field"><label>Approver Role</label><div class="input disabled">Reporting Manager</div></div>
+    </div>
+  </section>
+
+  <!-- <section class="mini-section process-section">
+    <h3 class="mini-title">Leave Application Process</h3>
+    <div class="process-flow">
+      <div class="process-step active"><span>1</span><strong>Select leave type</strong><small>Choose the correct leave category</small></div>
+      <div class="process-step"><span>2</span><strong>Enter dates</strong><small>System calculates total days</small></div>
+      <div class="process-step"><span>3</span><strong>Check balance</strong><small>Rules and balance are validated</small></div>
+      <div class="process-step"><span>4</span><strong>Manager review</strong><small>Daniel Reed reviews the request</small></div>
+      <div class="process-step"><span>5</span><strong>Status update</strong><small>Employee receives notification</small></div>
+    </div>
+  </section> -->
+
+  <section class="mini-section">
+    <h3 class="mini-title">Leave Details</h3>
+    <form class="leave-form" action="confirmation.html">
+      <div class="form-grid">
+        <div class="field">
+          <label for="leaveType">Leave Type <span class="required">*</span></label>
+          <select id="leaveType" class="text-input select-input" required>
+            <option value="" selected disabled>-- Select leave type --</option>
+            <option>Annual Leave</option>
+            <option>Sick Leave</option>
+            <option>No-Pay Leave</option>
+            <option>Maternity Leave</option>
+            <option>Paternity Leave</option>
+          </select>
+        </div>
+        <div class="field"><label>Available Balance</label><div class="input disabled"><span id="balanceText">Shown after leave type is selected</span></div></div>
+        <div class="field"><label for="startDate">Start Date <span class="required">*</span></label><input id="startDate" class="text-input" type="date" required></div>
+        <div class="field"><label for="endDate">End Date <span class="required">*</span></label><input id="endDate" class="text-input" type="date" required></div>
+        <div class="field"><label>Total Days</label><div class="input disabled"><strong id="totalDays">0 day</strong></div></div>
+        <div class="field"><label>Supporting Document</label><input class="text-input file-input" type="file"></div>
+        <div class="field full"><label for="reason">Reason / Notes</label><textarea id="reason" class="textarea-input" placeholder="Example: Family vacation, medical appointment, personal matters"></textarea></div>
+      </div>
+
+      <div class="info-box approval-note">
+        <div class="info-icon">i</div>
+        <div><strong>Approval route:</strong> Sarah Lum → Daniel Reed, Reporting Manager. If the request requires special consideration or escalation, it will be forwarded to the HR Manager.</div>
+      </div>
+
+      <div class="button-row form-corner-actions">
+        <a class="btn" href="index.html">Cancel Request</a>
+        <button class="btn primary" type="submit" style="min-width:220px;">Submit Leave Request</button>
+      </div>
+    </form>
+  </section>
+</div>
+<div class="footer">© 2024 ANYBusiness Sdn. Bhd. All rights reserved.</div>
+</section></main>
+<script>
+  const leaveType = document.getElementById('leaveType');
+  const balanceText = document.getElementById('balanceText');
+  const startDate = document.getElementById('startDate');
+  const endDate = document.getElementById('endDate');
+  const totalDays = document.getElementById('totalDays');
+  const balances = {
+    'Annual Leave': '10 days available',
+    'Sick Leave': '5 days available',
+    'No-Pay Leave': '2 days available',
+    'Maternity Leave': '60 days available',
+    'Paternity Leave': '10 days available'
+  };
+  leaveType.addEventListener('change', () => {
+    balanceText.textContent = balances[leaveType.value] || 'Shown after leave type is selected';
+  });
+  function updateDays(){
+    if(!startDate.value || !endDate.value){ totalDays.textContent = '0 day'; return; }
+    const start = new Date(startDate.value);
+    const end = new Date(endDate.value);
+    const diff = Math.round((end - start) / (1000 * 60 * 60 * 24)) + 1;
+    totalDays.textContent = diff > 0 ? `${diff} ${diff === 1 ? 'day' : 'days'}` : 'Check dates';
+  }
+  startDate.addEventListener('change', updateDays);
+  endDate.addEventListener('change', updateDays);
+  document.querySelector('.leave-form').addEventListener('submit', () => {
+    localStorage.setItem('leaveType', leaveType.value || 'Not selected');
+    localStorage.setItem('startDate', startDate.value || '');
+    localStorage.setItem('endDate', endDate.value || '');
+    localStorage.setItem('totalDays', totalDays.textContent || '0 day');
+  });
+</script>
+</body>
+</html>
